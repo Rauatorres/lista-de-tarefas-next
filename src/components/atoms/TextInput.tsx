@@ -1,13 +1,15 @@
+import { ChangeEvent } from "react";
+
 type TextInputProps = {
     type: "text" | "email" | "password",
     id?: string,
     name?: string,
     placeholder?: string,
-    defaultValue?: string,
-    onChange?: () => void,
+    value?: string,
+    onInput?: (e: ChangeEvent<HTMLInputElement>) => void,
 }
 
-const TextInput = ({ type, id, name, placeholder, defaultValue, onChange }: TextInputProps) => {
+const TextInput = ({ type, id, name, placeholder, value, onInput }: TextInputProps) => {
     return (
         <input
             className="
@@ -23,8 +25,8 @@ const TextInput = ({ type, id, name, placeholder, defaultValue, onChange }: Text
             name={name} 
             id={id} 
             placeholder={placeholder}
-            value={defaultValue}
-            onChange={onChange}
+            value={value}
+            onInput={onInput}
         />
     );
 };

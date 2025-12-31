@@ -1,4 +1,4 @@
-import style from '../../../styles/buttonsContainer.module.css';
+import style from '../../css/buttonsContainer.module.css';
 
 const ButtonsContainer = ({ children }: { children: React.ReactNode }) => {
     return (
