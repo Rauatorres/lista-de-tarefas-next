@@ -8,6 +8,7 @@ interface TaskList{
 
 type TaskType = {
     name: string,
+    checked: boolean
 };
 
 export type { TaskType, TaskList } 

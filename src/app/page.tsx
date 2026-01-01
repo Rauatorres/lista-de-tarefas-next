@@ -1,6 +1,5 @@
 import NewTaskForm from "../features/newTaskForm/NewTaskForm";
 import TaskList from "../features/tasks/TaskList";
-import Button from "../components/atoms/Button";
 import TasksWrapper from "../context/tasks/TasksWrapper";
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
           <TasksWrapper>
             <NewTaskForm />
             <TaskList />
-            <Button size={"md"} color={"gray"} text={"adicionar tarefa"} />
           </TasksWrapper>
         </div>
       </section>

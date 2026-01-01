@@ -1,12 +1,13 @@
 type ButtonProps = {
     size: 'sm' | 'md' | 'lg',
-    color: 'red' | 'blue' | 'green' | 'yellow' | 'gray' | 'black',
+    color: 'red' | 'blue' | 'green' | 'yellow' | 'gray' | 'black' | 'disabled',
     text: string,
     type?: "button" | "submit" | "reset",
-    onClick?: () => void
+    additionalStyle?: string,
+    onClick?: () => void,
 }
 
-const Button = ({ text, type, size, color, onClick }: ButtonProps) => {
+const Button = ({ text, type, size, color, onClick, additionalStyle }: ButtonProps) => {
     const base = `
         cursor-pointer
         block
@@ -26,11 +27,12 @@ const Button = ({ text, type, size, color, onClick }: ButtonProps) => {
         blue: 'bg-blue-700 text-white',
         green: 'bg-green-700 text-white',
         yellow: 'bg-yellow-500 text-black',
+        disabled: 'bg-gray-700 text-gray-500',
     };
 
     return (
         <button
-            className={sizes[size] + ' ' + colors[color] + ' ' + base}
+            className={sizes[size] + ' ' + colors[color] + ' ' + base + ' ' + additionalStyle}
             type={type}
             onClick={onClick}
         >{text}</button>

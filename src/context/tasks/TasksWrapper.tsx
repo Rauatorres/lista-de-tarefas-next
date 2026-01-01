@@ -20,7 +20,7 @@ const TasksWrapper = ({ children }: { children: React.ReactNode }) => {
     }
 
     function update(taskIndex: number, newName: string){
-        dispatch({ type: 'update', taskId: taskIndex, newTaskData:  { name: newName }});
+        dispatch({ type: 'update', taskId: taskIndex, newTaskData:  { name: newName, checked: taskList[taskIndex].checked }});
     }
 
     return (

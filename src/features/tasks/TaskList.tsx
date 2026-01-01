@@ -1,6 +1,5 @@
 'use client'
 
-import TasksWrapper from "@/src/context/tasks/TasksWrapper";
 import Task from "./Task";
 import { useContext } from "react";
 import { TaskListContext } from "@/src/context/tasks/TasksContext";
